@@ -4,46 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <!-- Latest compiled and minified CSS -->
-   <link rel="stylesheet" href="">
+   
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+ 
     <title>Document</title>
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+   
+</script>
 </head>
-<style>
-    .main_box{
-     
-        padding: 5%;
 
+
+<style>
+    body{
+        background-color: rgb(24, 24, 24);
     }
     .fst_box_row{
-                    
+        display: grid;
+        grid-template-columns: repeat(3,10vw);
+        grid-template-rows: repeat(3,10vw);
+        justify-content: center;
+
     }
- 
-    .nin_box{
+    .box{
+        border: 2px solid white;
+        border-left: 0;
+        border-top: 0;
         text-align: center;
-        padding: 7%;
+        font-size: 100px;
+        color: white;
         
     }
+    .bb-0{
+        border-bottom: 0;
+    }
+    .bl-0{
+        border-right: 0;
+    }
+    /* .nin_box{
+        text-align: center;
+        padding: 11%;
+        
+    } */
 
-    .fst_box, .snd_box, .frth_box, .fif_box{
+    /* .fst_box, .snd_box, .frth_box, .fif_box{
         border-right:  3px solid black;
         border-bottom: 3px solid black;
-        padding: 7%;
+        padding: 11%;
         text-align: center;
     }
     .trd_box, .six_box{
         border-bottom: 3px solid black;
-        padding: 7%;
+        padding: 11%;
         text-align: center;
     }
     .svn_box, .egh_box{
+
         border-right:  3px solid black;
-        padding: 7%;
+        padding: 11%;
         text-align: center;
+    } */
+    .box:hover{
+        background-color: whitesmoke;
     }
   
     .button_main_box{
         
-        display: flex;
+        display: grid;
         flex-direction: column;
         align-items: center;
        justify-content: center;
@@ -53,62 +81,69 @@
     button{
         height: 80px;
         width: 80px;
-       margin-bottom: 60%;
+       margin-bottom: 50%;
        font-size: 300%;
-       background-color: rgb(175, 175, 175);
+        
+    }
+    button:hover{
+        box-shadow: 2px 2px 15px rgb(68, 67, 67) inset;
     }
     .button_box{
         display: flex;
         flex-direction: column;
         align-items: center;
        justify-content: center;
-       justify-content: space-around;
-        
+       /* justify-content: space-around; */
+
         
 }
-    button:hover{
-        background-color: rgb(212, 205, 205);
+    .box:hover{
+        /* background-color: #f5f5f552; */
+        background-image: linear-gradient(rgb(24, 24, 24), rgba(170, 168, 168, 0.801));
+        color: black;
     }
+    .fst_btn, .snd_btn{
+        color: black;
+        
+    }
+    .wincon{
+        color: white;
+    }
+    img{fill: white;}
+  
 </style>
-<body>
-    <div class="row main_div">
-        <div class="col-md-8 main_box">
-            <div class="row fst_box_row">
-                   <div class="col-md-4 fst_box">1</div>
-                   <div class="col-md-4 snd_box">2</div> 
-                   <div class="col-md-4 trd_box">3</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 frth_box">4</div>
-                    <div class="col-md-4 fif_box">5</div> 
-                    <div class="col-md-4 six_box">6</div>
-                 </div>
-                <div class="row">
-                   <div class="col-md-4 svn_box">7</div>
-                   <div class="col-md-4 egh_box">8</div> 
-                   <div class="col-md-4 nin_box">9</div>
-                </div>
-
-                <div class="row">
-
-                </div>
-        </div>
-        <div class="col-md-4 center button_main_box">
-                <div class="row button_box">
-                    <button>O</button>
-                    <button>X</button>
-                    <button><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                        <svg width="50px" height="50px" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-                        
-                        <g fill="none" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0 1 1 0 2.5 2.5)">
-                        
-                        <path d="m3.98652376 1.07807068c-2.38377179 1.38514556-3.98652376 3.96636605-3.98652376 6.92192932 0 4.418278 3.581722 8 8 8s8-3.581722 8-8-3.581722-8-8-8"/>
-                        
-                        <path d="m4 1v4h-4" transform="matrix(1 0 0 -1 0 6)"/>
-                        
-                        </g></button>
+<body class="container">
+    <div class="row main_div" style="margin: 5%;">
+        <div class="col-md-8 grid_box">
+            <div class="fst_box_row">
+                    <div class="box">     <p class="boxtext"></p></div>
+                    <div class="box">     <p class="boxtext"></p></div> 
+                    <div class="box bl-0"><p class="boxtext"></p></div>
+                    <div class="box">     <p class="boxtext"></p></div>
+                    <div class="box">     <p class="boxtext"></p></div> 
+                    <div class="box bl-0"><p class="boxtext"></p></div>
+                    <div class="box bb-0"><p class="boxtext"></p></div>
+                    <div class="box bb-0"><p class="boxtext"></p></div> 
+               <div class="box bl-0 bb-0"><p class="boxtext"></p></div>
                 </div>
                 
+                
+                <h2 align="center" class="wincon" style="margin-top: 10%; ">Turn for O </h2>
+            
+        </div>
+        <div class="col-md-4 button_main_box">
+                <div class="row button_box">
+                    <button class="fst_btn  " id="player1">O</button>
+                    <button class="snd_btn  " id="player2">X</button>
+                    <button class="reset" id="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="black" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                            <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                          </svg>
+                    </button>
+                    
+                </div>
+               
         </div>
 
     </div>
@@ -121,6 +156,6 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="./index.js"></script>
 </body>
 </html>
