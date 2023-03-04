@@ -75,22 +75,3 @@ reset.addEventListener('click', () => {
     document.getElementsByClassName("wincon")[0].innerText = "Turn for " + turn;
     // document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px"
 })
-function Disable()
-{
-    b1.disabled=true;
-}
-// function handleRestartGame() {
-//     gameActive = true;
-//     currentPlayer = "O";
-//     gameState = ["", "", "", "", "", "", "", "", ""];
-//     statusDisplay.innerHTML = currentPlayerTurn();
-//     document.querySelectorAll(".cell").forEach((cell) => (cell.innerHTML = ""));
-//   }
-// $(document).ready(function(){
-//     $(".reset").click(function(){
-//       $("p").empty();
-//     });
-//     $(".reset").click(function(){
-//         $("h2").reload(page);
-//       });
-//   });
